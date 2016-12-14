@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="background-image: url('http://ifavor123.com/ifavor/store/catalog/lg/HP1084.jpg')">
     <!-- Starting Navbar -->
     <!-- Starting Navbar -->
     <!-- Starting Navbar -->
@@ -56,6 +56,37 @@
         <div class="page-header" id="banner">
             <div class="row">
                 <h1>Let's Play Crystal Collector!</h1>
+            </div>
+        </div>
+        <div class="panel panel-default" id="Instructions">
+            <div class="panel-heading">Instructions</div>
+            <div class="panel-body">
+                <p>You will be given a random number at the start of each game.</p>
+                <p>There are 4 crystals below. By clicking a crystal you will add a specific number to your Total Score.</p>
+                <p>You win the game by matching your Total Score to the Random Number exactly. If your Total Score goes over the Random Number, you lose.</p>
+                <p> The value of each crystal's number will be hidden from you.</p>
+                <p>Each time the game starts, the crystals will be given new values and the Random Number will change.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="well well-lg col-md-6" id="RandomNumber">
+                29
+            </div>
+            <div class="panel panel-body panel-default col-md-4" id="tallyPanel">
+                <p id="result"></p>
+                <p id="wins">Wins = 0</p>
+                <p id="losses">Losses = 0</p>
+            </div>
+        </div>
+        <div class="row">
+            <img src="" class="pic" id="jewel0" value="">
+            <img src="" class="pic" id="jewel1" value="">
+            <img src="" class="pic" id="jewel2" value="">
+            <img src="" class="pic" id="jewel3" value="">
+        </div>
+        <div class="row">
+            <div class="well well-lg col-md-6" id="TotalScore">
+                0
             </div>
         </div>
     </div>
