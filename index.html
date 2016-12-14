@@ -53,7 +53,7 @@
     <!-- Starting main content -->
     <!-- Starting main content -->
     <div class="container">
-        <div class="page-header" id="banner">
+        <div class="page-header panel panel-body panel-default" id="banner">
             <div class="row">
                 <h1>Let's Play Crystal Collector!</h1>
             </div>
@@ -69,24 +69,31 @@
             </div>
         </div>
         <div class="row">
-            <div class="well well-lg col-md-6" id="RandomNumber">
-                29
+            <div class="panel panel-default" id="randPanelParent">
+                <div class="panel-heading">Random Number</div>
+                <div class="well well-lg" id="RandomNumber">                    
+                </div>
             </div>
             <div class="panel panel-body panel-default col-md-4" id="tallyPanel">
-                <p id="result"></p>
+                <h4 id="result"></h4>
                 <p id="wins">Wins = 0</p>
                 <p id="losses">Losses = 0</p>
             </div>
         </div>
         <div class="row">
-            <img src="" class="pic" id="jewel0" value="">
-            <img src="" class="pic" id="jewel1" value="">
-            <img src="" class="pic" id="jewel2" value="">
-            <img src="" class="pic" id="jewel3" value="">
+            <img src="" class="pic" id="jewel0">
+            <img src="" class="pic" id="jewel1">
+            <img src="" class="pic" id="jewel2">
+            <img src="" class="pic" id="jewel3">
         </div>
+        <br>
+        <br>
         <div class="row">
-            <div class="well well-lg col-md-6" id="TotalScore">
-                0
+            <div class="panel panel-default" id="randPanelParent">
+                <div class="panel-heading">Random Number</div>
+                <div class="well well-lg" id="totalScore">
+                    
+                </div>
             </div>
         </div>
     </div>

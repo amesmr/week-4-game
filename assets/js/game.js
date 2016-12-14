@@ -1,32 +1,64 @@
 var wins = 0;
 var losses = 0;
-var randomNumber = 0;
-var totalScore = 0;
 
 var jewelImgs = ["https://s-media-cache-ak0.pinimg.com/236x/bc/a1/d0/bca1d0ea2e9bf6cf46adf13390b887b0.jpg",
     "https://thegemstandard.files.wordpress.com/2013/11/christies-the-orange-diamond.png",
     "http://www.birthdaygems.org/images/birth-stone.jpg",
     "http://weknowyourdreams.com/images/emerald/emerald-08.jpg"
 ];
+var imgNumForPic = ["", "", "", ""];
 
 function initGame() {
+    var imgNumVal = 0;
+
     // generate a random number to help us randomly load the picture elements
     var picRand = Math.floor(Math.random() * jewelImgs.length);
-    // initialize as number
-    var imgNumVal = 0;
 
     for (i = 0; i < jewelImgs.length; i++) {
         // use picRand to display the images randomly
-        // using modulus operator will allow us to pick them 
+        // using modulus operator will allow us to pick them uniquely
         $("#jewel" + i).attr("src", jewelImgs[(jewelImgs.length + picRand + i) % jewelImgs.length]);
         // set the value of the image (for the onClick event) to a random num btwn 1 & 12
         imgNumVal = Math.floor((Math.random() * 12) + 1);
-        $("#jewel" + i).attr("value", imgNumVal);
+        imgNumForPic[i] = imgNumVal;
     }
+    // generate a number btwn 19 and 120 (inclusive) and put it into the RandomNumber element
+    $("#RandomNumber").html(Math.floor(Math.random() * (120 - 19 + 1)) + 19);
+    // reset the player's score to 0
+    $("#totalScore").html("0");
 }
 
-function handleClick() {
-
+function handleClick(obj) {
+    var currRandNum = $("#RandomNumber").html();
+    var currTotal = $("#totalScore").html();
+    var imgVal = 0;
+    for (i = 0; i < imgNumForPic.length; i++) {
+        // if the last char of the element is btwn 0 and 3, use its value
+        if ($(this).attr("id").indexOf(i) >= 0) {
+            imgVal = imgNumForPic[i];
+        }
+    }
+    var newTotal = parseInt(imgVal) + parseInt(currTotal);
+    console.log("newTotal = " + newTotal);
+    if (newTotal > currRandNum) {
+        // you lose
+        // update losses and call init
+        losses++;
+        $("#losses").html("Losses = " + losses);
+        $("#result").html("You lose!!  Sorry!");
+        initGame();
+    } else if (newTotal == currRandNum) {
+        // you win!
+        // update wincounter and call init
+        wins++;
+        $("#wins").html("Wins = " + wins);
+        $("#result").html("You WON!!");
+        $("#totalScore").html(newTotal);
+        initGame();
+    } else {
+        // keep going
+        $("#totalScore").html(newTotal);
+    }
 }
 
 $(document).ready(function() {
@@ -39,35 +71,26 @@ $(document).ready(function() {
 
     function ReSize() {
         if ($(this).width() <= '480') {
-            $(".resized-left").attr("class", "resized-left col-sm-10 col-offset-sm-2");
-            $(".resized-right").attr("class", "resized-right col-sm-10 col-offset-sm-2");
             $(".pic").css({
                 "width": "50px",
                 "height": "50px",
-                "verticalAlign": "textBottom"
             });
         } else if ($(this).width() <= '768') {
-            $(".resized-left").attr("class", "resized-left col-md-5 col-offset-md-1");
-            $(".resized-right").attr("class", "resized-right col-md-5 col-offset-md-1");
             $(".pic").css({
                 "width": "80px",
                 "height": "80px",
-                "verticalAlign": "textBottom"
             });
         } else if ($(this).width() <= '980') {
-            $(".resized-left").attr("class", "resized-left col-lg-5 col-offset-lg-1");
-            $(".resized-right").attr("class", "resized-right col-lg-5 col-offset-lg-1");
             $(".pic").css({
                 "width": "100px",
                 "height": "100px",
-                "verticalAlign": "textBottom"
             });
         }
     }
     ReSize();
+    $("#jewel0").on("click", handleClick);
     $("#jewel1").on("click", handleClick);
     $("#jewel2").on("click", handleClick);
     $("#jewel3").on("click", handleClick);
-    $("#jewel4").on("click", handleClick);
 
 });
