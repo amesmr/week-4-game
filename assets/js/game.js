@@ -106,7 +106,7 @@ $(document).ready(function() {
     }
     runIt();
 
-    // No, I mean really annoy them!
+    // No, I mean really annoy them!  We want to win, right?!
    var obj = $('#banner');
      function makeIt() {
        obj.animate({opacity:'1'}, 500);
