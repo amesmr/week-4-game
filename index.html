@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="background-image: url('http://ifavor123.com/ifavor/store/catalog/lg/HP1084.jpg')">
+<body style="background-image: url('http://ifavor123.com/ifavor/store/catalog/lg/HP1084.jpg')" onresize="ReSize">
     <!-- Starting Navbar -->
     <!-- Starting Navbar -->
     <!-- Starting Navbar -->
@@ -38,6 +38,7 @@
                             <li>
                                 <form class="navbar-form">
                                     <div class="form-group">
+                                        <p>Clicking Restart will reset all counters and start the game over</p>
                                         <button type="button" class="btn btn-default" onclick="location.reload(true)">Restart
                                         </button>
                                     </div>
@@ -69,13 +70,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="panel panel-default" id="randPanelParent">
+            <div class="panel panel-default col-md-6" id="randPanelParent">
                 <div class="panel-heading">Random Number</div>
-                <div class="well well-lg" id="RandomNumber">                    
+                <div class="panel-body" id="RandomNumber">                    
                 </div>
             </div>
             <div class="panel panel-body panel-default col-md-4" id="tallyPanel">
-                <h4 id="result"></h4>
+                <h4 id="result">Test your analytical skills!</h4>
                 <p id="wins">Wins = 0</p>
                 <p id="losses">Losses = 0</p>
             </div>
@@ -89,9 +90,9 @@
         <br>
         <br>
         <div class="row">
-            <div class="panel panel-default" id="randPanelParent">
-                <div class="panel-heading">Random Number</div>
-                <div class="well well-lg" id="totalScore">
+            <div class="panel panel-default col-md-6" id="randPanelParent">
+                <div class="panel-heading">Total Score</div>
+                <div class="panel-body" id="totalScore">
                     
                 </div>
             </div>

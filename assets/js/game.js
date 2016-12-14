@@ -69,6 +69,12 @@ $(document).ready(function() {
         ReSize();
     });
 
+    $("#jewel0").on("click", handleClick);
+    $("#jewel1").on("click", handleClick);
+    $("#jewel2").on("click", handleClick);
+    $("#jewel3").on("click", handleClick);
+    ReSize();
+
     function ReSize() {
         if ($(this).width() <= '480') {
             $(".pic").css({
@@ -83,14 +89,14 @@ $(document).ready(function() {
         } else if ($(this).width() <= '980') {
             $(".pic").css({
                 "width": "100px",
-                "height": "100px",
+                "height": "100px"
+            });
+        } else {
+            $(".pic").css({
+                "width": "120px",
+                "height": "120px"
             });
         }
     }
-    ReSize();
-    $("#jewel0").on("click", handleClick);
-    $("#jewel1").on("click", handleClick);
-    $("#jewel2").on("click", handleClick);
-    $("#jewel3").on("click", handleClick);
 
 });
