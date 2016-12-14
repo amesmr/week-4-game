@@ -98,5 +98,20 @@ $(document).ready(function() {
             });
         }
     }
+    // let's annoy the crap out of the player so that he can't think straight
+   var objs = $('.opacity');
+     function runIt() {
+       objs.animate({opacity:'1'}, 1000);
+       objs.animate({opacity:'0.75'}, 1000, runIt);
+    }
+    runIt();
+
+    // No, I mean really annoy them!
+   var obj = $('#banner');
+     function makeIt() {
+       obj.animate({opacity:'1'}, 500);
+       obj.animate({opacity:'0.33'}, 500, makeIt);
+    }
+    makeIt();
 
 });
