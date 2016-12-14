@@ -3,8 +3,8 @@ var losses = 0;
 
 var jewelImgs = ["https://s-media-cache-ak0.pinimg.com/236x/bc/a1/d0/bca1d0ea2e9bf6cf46adf13390b887b0.jpg",
     "https://thegemstandard.files.wordpress.com/2013/11/christies-the-orange-diamond.png",
-    "http://www.birthdaygems.org/images/birth-stone.jpg",
-    "http://weknowyourdreams.com/images/emerald/emerald-08.jpg"
+    "https://cdn.wittyfeed.com/16260/5d0pcfphbp22o1xhdxdh.jpeg",
+    "https://media1.riogrande.com/Products/Images/Large/088154.jpg"
 ];
 var imgPicVal = [-1, -1, -1, -1];
 
@@ -76,29 +76,6 @@ $(document).ready(function() {
     $("#jewel3").on("click", handleClick);
     ReSize();
 
-    function ReSize() {
-        if ($(this).width() <= '480') {
-            $(".pic").css({
-                "width": "50px",
-                "height": "50px",
-            });
-        } else if ($(this).width() <= '768') {
-            $(".pic").css({
-                "width": "80px",
-                "height": "80px",
-            });
-        } else if ($(this).width() <= '980') {
-            $(".pic").css({
-                "width": "100px",
-                "height": "100px"
-            });
-        } else {
-            $(".pic").css({
-                "width": "120px",
-                "height": "120px"
-            });
-        }
-    }
     // let's annoy the crap out of the player so that he can't think straight
     var objs = $('.opacity');
 
@@ -118,3 +95,27 @@ $(document).ready(function() {
     makeIt();
 
 });
+
+function ReSize() {
+    if ($(this).width() <= '480') {
+        $(".pic").css({
+            "width": "50px",
+            "height": "50px",
+        });
+    } else if ($(this).width() <= '768') {
+        $(".pic").css({
+            "width": "80px",
+            "height": "80px",
+        });
+    } else if ($(this).width() <= '980') {
+        $(".pic").css({
+            "width": "100px",
+            "height": "100px"
+        });
+    } else {
+        $(".pic").css({
+            "width": "120px",
+            "height": "120px"
+        });
+    }
+}
