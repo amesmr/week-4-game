@@ -107,25 +107,29 @@ function ReSize() {
         $(".pic").css({
             "width": "50px",
             "height": "50px",
-            "margin": "2%",
+            "margin-left": "2%",
+            "margin-right": "2%",
         });
     } else if ($(this).width() <= '768') {
         $(".pic").css({
             "width": "80px",
             "height": "80px",
-            "margin": "3%",
+            "margin-left": "3%",
+            "margin-right": "3%",
         });
     } else if ($(this).width() <= '980') {
         $(".pic").css({
             "width": "100px",
             "height": "100px",
-            "margin": "4%",
+            "margin-left": "4%",
+            "margin-right": "4%",
         });
     } else {
         $(".pic").css({
             "width": "120px",
             "height": "120px",
-            "margin": "5%",
+            "margin-left": "5%",
+            "margin-right": "5%",
         });
     }
 }
