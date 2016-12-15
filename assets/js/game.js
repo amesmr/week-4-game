@@ -23,7 +23,7 @@ function initGame() {
         imgPicVal[i] = (picJwlRandVal + 12 + i) % 12;
     }
     // generate a number btwn 19 and 120 (inclusive) and put it into the RandomNumber element
-    $("#RandomNumber").html(Math.floor(Math.random() * ((120 - 19 + 1) % 19) + 19);
+    $("#RandomNumber").html(Math.floor(Math.random() * (((120 - 19 + 1) % 19) + 19)));
     // reset the player's score to 0
     $("#totalScore").html("0");
 
