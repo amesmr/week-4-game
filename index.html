@@ -70,32 +70,45 @@
             </div>
         </div>
         <div class="row">
-            <div class="panel panel-default col-md-5 col-md-offset-1" id="randPanelParent">
-                <div class="panel-heading">Random Number</div>
-                <div class="panel-body" id="RandomNumber">                    
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-1">
+                <div class="panel panel-default" id="randPanel">
+                    <div class="panel-heading">Random Number</div>
+                    <div class="panel-body" id="RandomNumber">
+                    </div>
                 </div>
             </div>
-            <div class="panel panel-body panel-default col-md-3 col-md-offset-1" id="tallyPanel">
-                <div class="panel-heading" id="result">Test your analytical skills!</div>
-                <p id="wins">Wins = 0</p>
-                <p id="losses">Losses = 0</p>
+            <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-5 col-xs-offset-1">
+                <div class="panel panel-default" id="tallyPanel">
+                    <div class="panel-heading" id="result">Test your analytical skills!</div>
+                    <div class="panel-body">
+                        <p id="wins">Wins = 0</p>
+                        <p id="losses">Losses = 0</p>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <!-- Using the # as a placeholder to quiet errors for empty string -->
-            <!-- JS will fill in these values in initGame function -->
-            <img src="#" class="pic" id="jewel0" alt="jewel 1">
-            <img src="#" class="pic" id="jewel1" alt="jewel 2">>
-            <img src="#" class="pic" id="jewel2" alt="jewel 3">>
-            <img src="#" class="pic" id="jewel3" alt="jewel 4">>
+            <!-- just using a panel to get similar layout to the rest of the page -->
+            <!-- setting visibility to hidden -->
+            <div class="panel panel-default" style="visibility: hidden;">
+                <div class="panel-body" style="visibility: hidden;">
+                    <!-- Using the # as a placeholder to quiet errors for empty string -->
+                    <!-- JS will fill in these values in initGame function -->
+                    <img src="#" class="pic" id="jewel0" alt="jewel 1" style="visibility: visible;">
+                    <img src="#" class="pic" id="jewel1" alt="jewel 2" style="visibility: visible;">
+                    <img src="#" class="pic" id="jewel2" alt="jewel 3" style="visibility: visible;">
+                    <img src="#" class="pic" id="jewel3" alt="jewel 4" style="visibility: visible;">
+                </div>
+            </div>
         </div>
         <br>
         <br>
         <div class="row">
-            <div class="panel panel-default col-md-5 col-md-offset-1">
-                <div class="panel-heading opacity">Total Score</div>
-                <div class="panel-body" id="totalScore">
-                    
+            <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-1" id="totalPanel">
+                <div class="panel panel-default">
+                    <div class="panel-heading opacity">Total Score</div>
+                    <div class="panel-body" id="totalScore">
+                    </div>
                 </div>
             </div>
         </div>
