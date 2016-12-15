@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body style="background-image: url('http://ifavor123.com/ifavor/store/catalog/lg/HP1084.jpg')" onresize="ReSize">
+<body style="background-image: url('assets/images/HP1084.jpg')" onresize="ReSize()">
     <!-- Starting Navbar -->
     <!-- Starting Navbar -->
     <!-- Starting Navbar -->
@@ -82,15 +82,17 @@
             </div>
         </div>
         <div class="row">
-            <img src="" class="pic" id="jewel0">
-            <img src="" class="pic" id="jewel1">
-            <img src="" class="pic" id="jewel2">
-            <img src="" class="pic" id="jewel3">
+            <!-- Using the # as a placeholder to quiet errors for empty string -->
+            <!-- JS will fill in these values in initGame function -->
+            <img src="#" class="pic" id="jewel0" alt="jewel 1">
+            <img src="#" class="pic" id="jewel1" alt="jewel 2">>
+            <img src="#" class="pic" id="jewel2" alt="jewel 3">>
+            <img src="#" class="pic" id="jewel3" alt="jewel 4">>
         </div>
         <br>
         <br>
         <div class="row">
-            <div class="panel panel-default col-md-6" id="randPanelParent">
+            <div class="panel panel-default col-md-6">
                 <div class="panel-heading opacity">Total Score</div>
                 <div class="panel-body" id="totalScore">
                     

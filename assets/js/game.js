@@ -1,10 +1,10 @@
 var wins = 0;
 var losses = 0;
 
-var jewelImgs = ["https://s-media-cache-ak0.pinimg.com/236x/bc/a1/d0/bca1d0ea2e9bf6cf46adf13390b887b0.jpg",
-    "https://thegemstandard.files.wordpress.com/2013/11/christies-the-orange-diamond.png",
-    "http://www.birthdaygems.org/images/birth-stone.jpg",
-    "http://weknowyourdreams.com/images/emerald/emerald-08.jpg"
+var jewelImgs = ["assets/images/bca1d0ea2e9bf6cf46adf13390b887b0.jpg",
+    "assets/images/christies-the-orange-diamond.png",
+    "assets/images/birth-stone.jpg",
+    "assets/images/emerald-08.jpg"
 ];
 var imgPicVal = [-1, -1, -1, -1];
 
@@ -23,7 +23,7 @@ function initGame() {
         imgPicVal[i] = (picJwlRandVal + 12 + i) % 12;
     }
     // generate a number btwn 19 and 120 (inclusive) and put it into the RandomNumber element
-    $("#RandomNumber").html(Math.floor(Math.random() * (120 - 19 + 1) % 19));
+    $("#RandomNumber").html(Math.floor(Math.random() * ((120 - 19 + 1) % 19) + 19);
     // reset the player's score to 0
     $("#totalScore").html("0");
 
